@@ -3,7 +3,7 @@
 'use strict';
 
 import invariant from 'invariant';
-import React from 'react';
+import React, {Component} from 'react';
 
 import {
   Animated,
@@ -20,7 +20,7 @@ export type Props = {
 };
 
 export function createDragShadow(Component: ReactClass): ReactClass {
-  class DragShadow extends (React.Component : typeof ReactComponent) {
+  class DragShadow extends (Component : typeof ReactComponent) {
 
     props: Props;
 

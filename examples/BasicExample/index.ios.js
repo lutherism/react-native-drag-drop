@@ -4,7 +4,7 @@
  */
 'use strict';
 
-import React from 'react';
+import React, {} from 'react';
 import ReactNative from 'react-native';
 import {
   createAutoscrollable,
@@ -37,7 +37,7 @@ const dragContext = createDragContext((props, state) => {
   return Promise.resolve();
 });
 
-const DraggableThing = React.createClass({
+class DraggableThing extends Component {
   render() {
     const { onLayout, onLongPress } = this.props;
 
@@ -50,9 +50,9 @@ const DraggableThing = React.createClass({
       </TouchableHighlight>
     );
   }
-});
+};
 
-const DragShadow = createDragShadow(React.createClass({
+const DragShadow = createDragShadow(class extends Component {
   render() {
     return (
       <Animated.View style={[styles.dragShadow, this.props.style]}>
@@ -60,9 +60,9 @@ const DragShadow = createDragShadow(React.createClass({
       </Animated.View>
     );
   }
-}));
+});
 
-const RedDropZone = createDropZone(React.createClass({
+const RedDropZone = createDropZone(class extends Component {
   render() {
     const {
       onDragItemLayout, // Injected by createDropZone()
@@ -86,9 +86,9 @@ const RedDropZone = createDropZone(React.createClass({
       </View>
     );
   }
-}), 'red');
+}, 'red');
 
-const BlueDropZone = createDropZone(React.createClass({
+const BlueDropZone = createDropZone(class extends Component {
   render() {
     const {
       onDragItemLayout, // Injected by createDropZone()
@@ -111,9 +111,9 @@ const BlueDropZone = createDropZone(React.createClass({
       </View>
     );
   }
-}), 'blue');
+}, 'blue');
 
-const DragArena = createDragArena(React.createClass({
+const DragArena = createDragArena(class extends Component {
   render() {
     const { startDragHandler } = this.props; // Injected by createDragArena()
 
@@ -124,7 +124,7 @@ const DragArena = createDragArena(React.createClass({
       </View>
     );
   }
-}), DragShadow, dragContext, 'x');
+}, DragShadow, dragContext, 'x');
 
 const styles = StyleSheet.create({
   container: {

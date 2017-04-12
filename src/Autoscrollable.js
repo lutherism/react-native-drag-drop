@@ -3,7 +3,7 @@
 'use strict';
 
 import invariant from 'invariant';
-import React from 'react';
+import React, {Component} from 'react';
 const {
   PropTypes,
 } = React;
@@ -25,7 +25,7 @@ const AUTOSCROLL_POS_INCREMENT = 20;
 const AUTOSCROLL_TIME_INTERVAL = 300;
 
 export function createAutoscrollable(Component: ReactClass): ReactClass {
-  class Autoscrollable extends (React.Component : typeof ReactComponent) {
+  class Autoscrollable extends (Component : typeof ReactComponent) {
     props: Props;
     static defaultProps: {};
 

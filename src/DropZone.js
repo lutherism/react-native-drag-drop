@@ -2,7 +2,7 @@
 
 'use strict';
 
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {
   View,
 } from 'react-native';
@@ -35,7 +35,7 @@ import { NativeLayoutEvent, SyntheticNativeEvent } from './types';
 export function createDropZone(Component: ReactClass, dropZoneName: string): ReactClass {
   invariant(dropZoneName, 'Drop zone name must be set!');
 
-  class DropZone extends (React.Component : typeof ReactComponent) {
+  class DropZone extends (Component : typeof ReactComponent) {
 
     context: {
       dragContext: DragContext

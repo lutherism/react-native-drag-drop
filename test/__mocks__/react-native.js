@@ -1,6 +1,6 @@
 'use strict';
 
-const React = require('react');
+import React, {Component} from 'react';
 const ReactNative = React;
 
 ReactNative.StyleSheet = {
@@ -9,14 +9,14 @@ ReactNative.StyleSheet = {
     }
 };
 
-class ActivityIndicatorIOS extends React.Component {}
-class ScrollView extends React.Component {}
-class View extends React.Component {}
-class Text extends React.Component {}
-class TextInput extends React.Component {}
-class TouchableHighlight extends React.Component {}
-class PickerIOS extends React.Component {}
-class PickerItem extends React.Component {}
+class ActivityIndicatorIOS extends Component {}
+class ScrollView extends Component {}
+class View extends Component {}
+class Text extends Component {}
+class TextInput extends Component {}
+class TouchableHighlight extends Component {}
+class PickerIOS extends Component {}
+class PickerItem extends Component {}
 
 class PanResponder {
   constructor(handlers) {
@@ -47,7 +47,7 @@ class Animated {
   static spring() { return new StartableAnimation(); }
 }
 
-class AnimatedView extends React.Component {}
+class AnimatedView extends Component {}
 class AnimatedValue {
   setOffset() {}
 }

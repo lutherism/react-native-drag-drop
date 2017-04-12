@@ -2,7 +2,7 @@
 
 'use strict';
 
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 import {
   Animated,
   PanResponder,
@@ -39,7 +39,7 @@ export function createDragArena(
   invariant(panDirection === 'x' ||
             panDirection === 'y', 'Pan direction must be vertical (y) or horizontal (x)');
 
-  class DragArena extends (React.Component : typeof ReactComponent) {
+  class DragArena extends (Component : typeof ReactComponent) {
     props: Props;
     state: State;
 
